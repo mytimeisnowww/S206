@@ -20,7 +20,7 @@ describe('Criando cenario de teste para o site do Google',()=>{
         cy.get('.XDyW0e').click()
         cy.get('body').should('contain', 'desativada')
     })
-
+ 
     it('Caso de teste: Visita o google e clica no Como funciona a Pesquisa,deve aparecer a mensagem Nossa missão...',()=>{
         visit_google()
         cy.get('[href="https://google.com/search/howsearchworks/?fg=1"]').click()
