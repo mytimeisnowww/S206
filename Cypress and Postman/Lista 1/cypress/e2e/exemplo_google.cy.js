@@ -52,3 +52,4 @@ function visit_google(){
     cy.viewport(1500,700)
     cy.visit('https://www.google.com/')
 }
+ 
