@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "e1910ce5-1c7d-46ae-a61a-0b059ca28397",
+		"name": "Prova de Laboratório Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34904738"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Pegando os comentários",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Email da Esha Namboothiri\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include( \"esha_namboothiri@bernhard.test\");\r",
+									"});\r",
+									"pm.test(\"Body da yoginder mehra \", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Assumenda nisi quod.\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/comments",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Procurando o user 6952757",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Email\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bhat_pushti@schuppe.example\");\r",
+									"});\r",
+									"pm.test(\"Nome\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Pushti Bhat\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/6952757",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"6952757"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pegando os posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"title\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Voluptas stultus admitto suffoco accendo stips alveus terror.\");\r",
+									"});\r",
+									"pm.test(\"Body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Creta cumque non. Tergeo inflammatio sumo. Calcar dolorum corona. Admoneo quidem carbo. Cado vir crepusculum. Cotidie vindico abeo. Caveo complectus tumultus. Anser voluntarius utor. Angustus omnis somnus. Adsidue curia dapifer.\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/posts",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pegando users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"user 6952757\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"6952757\");\r",
+									"});\r",
+									"pm.test(\"user Nawal Mishra\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Nawal Mishra\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Atualizando o user 2934761",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Email\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Kiko@inatel.com.br\");\r",
+									"});\r",
+									"pm.test(\"Nome\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Mr. Chakradhar Marar\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "54bc7fef3d871b3606af402313946a03547b4fe154ce38b7fcfb4baf61fd18ec",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":  \"Kiko@inatel.com.br\" ,\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/2934761",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"2934761"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
